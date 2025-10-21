@@ -1,0 +1,74 @@
+[
+  {
+    "serviceId": 1,
+    "serviceName": "Winter Coat Fitting for Dogs",
+    "providerName": "PawCare Studio",
+    "providerEmail": "info@pawcare.com",
+    "price": 25,
+    "rating": 4.9,
+    "slotsAvailable": 4,
+    "description": "Custom coat fitting and warm outfit options to keep your dog comfortable in the cold.",
+    "image": "https://i.postimg.cc/3wWyjMmq/winter-coat-dog.png",
+    "category": "Clothing"
+  },
+  {
+    "serviceId": 2,
+    "serviceName": "Winter Grooming & Paw Treatment",
+    "providerName": "CozyPets Grooming",
+    "providerEmail": "hello@cozypets.com",
+    "price": 30,
+    "rating": 4.8,
+    "slotsAvailable": 3,
+    "description": "Professional grooming with moisturizing paw balm and winter-safe shampoo.",
+    "image": "https://i.postimg.cc/FzbCt2Gk/paw-treatment.png",
+    "category": "Grooming"
+  },
+  {
+    "serviceId": 3,
+    "serviceName": "Heated Pet Boarding Cabins",
+    "providerName": "SnowTail Retreat",
+    "providerEmail": "stay@snowtail.com",
+    "price": 45,
+    "rating": 4.7,
+    "slotsAvailable": 6,
+    "description": "Warm and cozy pet cabins with heated bedding and supervised playtime in climate-controlled areas.",
+    "image": "https://i.postimg.cc/DfghmSgj/heated-boarding.png",
+    "category": "Boarding"
+  },
+  {
+    "serviceId": 4,
+    "serviceName": "Nutritional Winter Diet Consultation",
+    "providerName": "HealthyPaws Nutrition",
+    "providerEmail": "contact@healthypaws.com",
+    "price": 20,
+    "rating": 4.6,
+    "slotsAvailable": 8,
+    "description": "Personalized diet plans to boost your pet’s immunity and energy during cold months.",
+    "image": "https://i.postimg.cc/tJPrBzHZ/winter-diet.png",
+    "category": "Nutrition"
+  },
+  {
+    "serviceId": 5,
+    "serviceName": "Arctic Adventure Dog Walks",
+    "providerName": "FrostyPaws Adventures",
+    "providerEmail": "book@frostypaws.com",
+    "price": 35,
+    "rating": 4.9,
+    "slotsAvailable": 5,
+    "description": "Guided winter walks with safety gear and warm-up breaks to keep pets active and happy.",
+    "image": "https://i.postimg.cc/7ZL8VNGD/dog-walks.png",
+    "category": "Exercise"
+  },
+  {
+    "serviceId": 6,
+    "serviceName": "Winter Wellness Vet Checkup",
+    "providerName": "NorthCare Animal Clinic",
+    "providerEmail": "support@northcarevet.com",
+    "price": 40,
+    "rating": 5.0,
+    "slotsAvailable": 2,
+    "description": "Comprehensive health checkup focusing on joint care, hydration, and cold-weather safety.",
+    "image": "https://i.postimg.cc/Y01mqQjS/vet-checkup.png",
+    "category": "Health"
+  }
+]
