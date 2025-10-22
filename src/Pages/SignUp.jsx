@@ -1,18 +1,41 @@
-import React from "react";
+import React, { useContext, useState } from "react";
 import { Link } from "react-router";
+import { AuthContext } from "../Provider/AuthProvider";
+import { toast } from "react-toastify";
+import { FaEye, FaEyeSlash } from "react-icons/fa";
 
 const SignUp = () => {
+  const { createUser, setUser } = useContext(AuthContext);
+  const [showpassword, setShowPassword] = useState(false);
+
   const handleSignup = (e) => {
     e.preventDefault();
-    const password = e.target.password.value;
-    const email = e.target.email.value;
-    const name = e.target.name.value;
+    const password = e.target.password?.value;
+    const email = e.target.email?.value;
+    const name = e.target.name?.value;
     console.log(email, password, name);
+
+    const regEx = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{6,}$/;
+    if (!regEx.test(password)) {
+      toast.warning(
+        "Password must be at least 6 characters long and include uppercase, lowercase, and a number."
+      );
+      return;
+    }
+
+    createUser(email, password)
+      .then((result) => {
+        setUser(result.user);
+        toast.success("Logged In Success.");
+      })
+      .catch((error) => {
+        toast.error(error.messasge);
+      });
   };
   return (
     <div className="w-full md:pt-35 pt-20 bg-base-200 min-h-screen">
       <div className="card mx-auto  bg-base-100 border border-primary w-full max-w-sm shrink-0 shadow-2xl">
-        <div className="card-body">
+        <div className="card-body relative">
           <form onSubmit={handleSignup}>
             <fieldset className="fieldset">
               <label className="label">Name</label>
@@ -29,19 +52,24 @@ const SignUp = () => {
                 name="email"
                 className="input"
                 placeholder="Email"
+                required
               />
 
               <label className="label">Password</label>
               <input
-                type="password"
-                name="name"
+                type={showpassword ? "text" : "password"}
+                name="password"
                 className="input"
                 placeholder="Password"
+                required
               />
+              <span
+                className="absolute top-50 right-12 cursor-pointer"
+                onClick={() => setShowPassword(!showpassword)}
+              >
+                {showpassword ? <FaEye size={21} /> : <FaEyeSlash size={21} />}
+              </span>
 
-              <div>
-                <a className="link link-hover">Forgot password?</a>
-              </div>
               <button
                 type="submit"
                 className="btn btn-neutral bg-secondary border border-primary mt-4"

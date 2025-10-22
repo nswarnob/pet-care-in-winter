@@ -47,7 +47,7 @@ const Navbar = () => {
             {Links}
           </ul>
         </div>
-        <a className="text-[#76a33e] font-bold text-xl">WarmPaws</a>
+        <Link to={'/'} className="text-[#76a33e] font-bold text-xl">WarmPaws</Link>
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1">{Links}</ul>

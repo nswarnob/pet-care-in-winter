@@ -4,6 +4,7 @@ import HomePage from "../Pages/HomePage";
 import ServicesPage from "../Pages/ServicesPage";
 import LoginPage from "../Pages/LoginPage";
 import SignUp from "../Pages/SignUp";
+import Loading from "../Components/Loading";
 
 export const router = createBrowserRouter([
   {
@@ -14,6 +15,7 @@ export const router = createBrowserRouter([
         index:true,
         element: <HomePage></HomePage>,
        loader: ()=>fetch("/Service.json"),
+       hydrateFallbackElement: <Loading></Loading>,
       },
       {
         path: "/services",
