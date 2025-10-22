@@ -1,8 +1,8 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
-import 'swiper/css/navigation';
-import 'swiper/css/pagination';
-import { Navigation, Pagination } from "swiper/modules";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+import { Autoplay, Navigation, Pagination } from "swiper/modules";
 
 import { useLoaderData } from "react-router";
 import dogImg from "../assets/banner-dogs.png";
@@ -15,7 +15,7 @@ const HomePage = () => {
   console.log(serviceData);
 
   return (
-    <div className="relative">
+    <div className="relative w-11/12 mx-auto">
       <div
         className="hero min-h-[600px] overflow-hidden relative "
         style={{
@@ -49,25 +49,33 @@ const HomePage = () => {
         alt="puppies"
         className="absolute left-1/2 transform md:translate-x-25 -translate-x-38 md:-translate-y-62 -translate-y-48 z-20 w-[300px] md:w-[400px]"
       />
-                    {/* Service by json data with swiper */}
+      {/* Service by json data with swiper */}
 
-      <div className="block md:flex items-center justify-center ">
-        <div className="md:w-1/2 w-100 mx-auto p-20">
+      <div className="block md:flex items-center justify-between max-w-[1200px] mx-auto ">
+        <div className="max-w-md">
           <h1 className="text-3xl font-semibold text-center mb-8">
             Pet Care Services
           </h1>
-          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perspiciatis iusto aut, earum consequuntur suscipit fugit qui dolor molestias. Assumenda, accusamus dolore. Sequi quod pariatur error porro maxime asperiores iusto deserunt. ipsum, dolor sit amet consectetur adipisicing elit. Ex magni asperiores aperiam quae enim accusamus repudiandae id labore quis quisquam. Accusantium numquam inventore rem! Impedit labore autem sed consequuntur consequatur?</p>
+          <p className=" text-center" >
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+            Perspiciatis iusto aut, earum consequuntur suscipit fugit qui dolor
+            molestias. Assumenda, accusamus dolore. Sequi quod pariatur error
+            porro maxime asperiores iusto deserunt. ipsum, dolor sit amet
+            consectetur adipisicing elit. Ex magni asperiores aperiam quae enim
+            accusamus repudiandae id labore quis quisquam. Accusantium numquam
+            inventore rem! Impedit labore autem sed consequuntur consequatur?
+          </p>
         </div>
 
         <div className="md:w-1/2 relative ">
           <Swiper
-            modules={[Navigation, Pagination]}
+            modules={[Navigation, Pagination, Autoplay]}
             slidesPerView={1}
             spaceBetween={30}
-            navigation
+            navigationShow
             pagination={{ clickable: true }}
             loop={true}
-            autoplay={{ delay: 3000 }}
+            autoplay={{ delay: 2700 }}
             className="rounded-2xl  pb-10"
           >
             {serviceData.map((service) => (
