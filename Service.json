@@ -1,0 +1,74 @@
+[
+  {
+    "serviceId": 1,
+    "serviceName": "Winter Coat Fitting for Dogs",
+    "providerName": "PawCare Studio",
+    "providerEmail": "info@pawcare.com",
+    "price": 25,
+    "rating": 4.9,
+    "slotsAvailable": 4,
+    "description": "Custom coat fitting and warm outfit options to keep your dog comfortable in the cold.",
+    "image": "https://www.thedogoutdoors.com/cdn/shop/files/puff_1500x.jpg?v=1700491576",
+    "category": "Clothing"
+  },
+  {
+    "serviceId": 2,
+    "serviceName": "Winter Grooming & Paw Treatment",
+    "providerName": "CozyPets Grooming",
+    "providerEmail": "hello@cozypets.com",
+    "price": 30,
+    "rating": 4.8,
+    "slotsAvailable": 3,
+    "description": "Professional grooming with moisturizing paw balm and winter-safe shampoo.",
+    "image": "https://cdn.shopify.com/s/files/1/0086/0795/7054/files/winter_grooming_healing_balm-100.jpg?v=1709284474",
+    "category": "Grooming"
+  },
+  {
+    "serviceId": 3,
+    "serviceName": "Heated Pet Boarding Cabins",
+    "providerName": "SnowTail Retreat",
+    "providerEmail": "stay@snowtail.com",
+    "price": 45,
+    "rating": 4.7,
+    "slotsAvailable": 6,
+    "description": "Warm and cozy pet cabins with heated bedding and supervised playtime in climate-controlled areas.",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSbxga5oVaiS5mU4C0svYrC8FrrvSnJPbN10A&s",
+    "category": "Boarding"
+  },
+  {
+    "serviceId": 4,
+    "serviceName": "Nutritional Winter Diet Consultation",
+    "providerName": "HealthyPaws Nutrition",
+    "providerEmail": "contact@healthypaws.com",
+    "price": 20,
+    "rating": 4.6,
+    "slotsAvailable": 8,
+    "description": "Personalized diet plans to boost your pet’s immunity and energy during cold months.",
+    "image": "data:image/jpeg;base64,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",
+    "category": "Nutrition"
+  },
+  {
+    "serviceId": 5,
+    "serviceName": "Arctic Adventure Dog Walks",
+    "providerName": "FrostyPaws Adventures",
+    "providerEmail": "book@frostypaws.com",
+    "price": 35,
+    "rating": 4.9,
+    "slotsAvailable": 5,
+    "description": "Guided winter walks with safety gear and warm-up breaks to keep pets active and happy.",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRi83iDbcIZxJtDug-N-s_vvbm_xWv4DCDILQ&s",
+    "category": "Exercise"
+  },
+  {
+    "serviceId": 6,
+    "serviceName": "Winter Wellness Vet Checkup",
+    "providerName": "NorthCare Animal Clinic",
+    "providerEmail": "support@northcarevet.com",
+    "price": 40,
+    "rating": 5.0,
+    "slotsAvailable": 2,
+    "description": "Comprehensive health checkup focusing on joint care, hydration, and cold-weather safety.",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR0yCHw19UaqV-tCMLyK-oquHVJ9vMSrN70bw&s",
+    "category": "Health"
+  }
+]

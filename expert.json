@@ -1,0 +1,62 @@
+[
+  {
+    "id": 1,
+    "name": "Dr. Emily Carter",
+    "expertise": "Veterinary Specialist",
+    "experience": "10 years",
+    "rating": 4.9,
+    "email": "emily.carter@pawcare.com",
+    "image": "https://i.postimg.cc/XJ7vq9ds/vet1.png",
+    "bio": "Dr. Emily is a certified veterinarian who specializes in animal nutrition and preventive healthcare. Her compassionate approach and deep understanding of pet behavior make her one of the most trusted experts in the field."
+  },
+  {
+    "id": 2,
+    "name": "James Anderson",
+    "expertise": "Professional Dog Trainer",
+    "experience": "8 years",
+    "rating": 4.8,
+    "email": "james.anderson@pawtrainers.com",
+    "image": "https://i.postimg.cc/DzT6Nm6m/trainer1.png",
+    "bio": "James is an expert in obedience and behavior training for all breeds. His gentle, reward-based techniques help dogs build confidence and trust with their owners."
+  },
+  {
+    "id": 3,
+    "name": "Sophia Kim",
+    "expertise": "Pet Grooming Specialist",
+    "experience": "6 years",
+    "rating": 4.7,
+    "email": "sophia.kim@cozypets.com",
+    "image": "https://i.postimg.cc/L4kFpTt1/groomer1.png",
+    "bio": "Sophia brings creativity and care to every grooming session. Her special winter grooming treatments help pets stay clean, healthy, and comfortable through the cold months."
+  },
+  {
+    "id": 4,
+    "name": "Dr. Rajiv Patel",
+    "expertise": "Animal Nutrition Consultant",
+    "experience": "12 years",
+    "rating": 4.9,
+    "email": "rajiv.patel@petwellness.com",
+    "image": "https://i.postimg.cc/jSnqRzpj/nutrition1.png",
+    "bio": "Dr. Patel focuses on customized meal planning for pets to enhance their immunity and energy levels — especially during seasonal changes like winter."
+  },
+  {
+    "id": 5,
+    "name": "Hannah Lee",
+    "expertise": "Pet Behavior Therapist",
+    "experience": "9 years",
+    "rating": 4.8,
+    "email": "hannah.lee@calmpaws.com",
+    "image": "https://i.postimg.cc/BbZJ5mL5/behavior1.png",
+    "bio": "Hannah helps pets overcome anxiety, fear, and separation stress through behavior therapy and positive reinforcement training."
+  },
+  {
+    "id": 6,
+    "name": "Michael Torres",
+    "expertise": "Pet Boarding & Care Manager",
+    "experience": "7 years",
+    "rating": 4.6,
+    "email": "michael.torres@snugpetresort.com",
+    "image": "https://i.postimg.cc/YCFXWQHn/boarding1.png",
+    "bio": "Michael manages safe, comfortable, and fun boarding environments for pets. He ensures every furry guest gets love, attention, and exercise daily."
+  }
+]
