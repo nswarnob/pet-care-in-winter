@@ -1,19 +1,23 @@
 import React, { useContext, useState } from "react";
-import { Link } from "react-router";
+import { Link, useNavigate } from "react-router";
 import { AuthContext } from "../Provider/AuthProvider";
 import { toast } from "react-toastify";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 
 const SignUp = () => {
-  const { createUser, setUser } = useContext(AuthContext);
+  const { createUser, setUser, updateUser } = useContext(AuthContext);
   const [showpassword, setShowPassword] = useState(false);
+
+ const nevigate = useNavigate();
+
 
   const handleSignup = (e) => {
     e.preventDefault();
     const password = e.target.password?.value;
     const email = e.target.email?.value;
     const name = e.target.name?.value;
-    console.log(email, password, name);
+    const photo = e.target.photoUrl?.value;
+    console.log(email, password, name, photo);
 
     const regEx = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{6,}$/;
     if (!regEx.test(password)) {
@@ -25,8 +29,19 @@ const SignUp = () => {
 
     createUser(email, password)
       .then((result) => {
-        setUser(result.user);
+        const user = result.user;
         toast.success("Logged In Success.");
+
+        //updated user data
+        updateUser({ displayName: name, photoURL: photo })
+          .then(() => {
+            setUser({ ...user, displayName: name, photoURL: photo });
+            nevigate('/');
+          })
+          .catch((error) => {
+            toast.error(error.messasge);
+            setUser(user);
+          });
       })
       .catch((error) => {
         toast.error(error.messasge);
@@ -37,6 +52,7 @@ const SignUp = () => {
       <div className="card mx-auto  bg-base-100 border border-primary w-full max-w-sm shrink-0 shadow-2xl">
         <div className="card-body relative">
           <form onSubmit={handleSignup}>
+            
             <fieldset className="fieldset">
               <label className="label">Name</label>
               <input
@@ -44,6 +60,14 @@ const SignUp = () => {
                 name="name"
                 className="input"
                 placeholder="Name"
+              />
+
+              <label className="label">Photo URL</label>
+              <input
+                type="url"
+                name="photoUrl"
+                className="input"
+                placeholder="Photo URL"
               />
 
               <label className="label">Email</label>

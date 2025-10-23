@@ -56,14 +56,23 @@ const HomePage = () => {
           <h1 className="text-3xl font-semibold text-center mb-8">
             Pet Care Services
           </h1>
-          <p className=" text-center" >
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-            Perspiciatis iusto aut, earum consequuntur suscipit fugit qui dolor
-            molestias. Assumenda, accusamus dolore. Sequi quod pariatur error
-            porro maxime asperiores iusto deserunt. ipsum, dolor sit amet
-            consectetur adipisicing elit. Ex magni asperiores aperiam quae enim
-            accusamus repudiandae id labore quis quisquam. Accusantium numquam
-            inventore rem! Impedit labore autem sed consequuntur consequatur?
+          <p className=" text-center">
+           <span> At WarmPaws Retreat, we believe every pet deserves personalized
+            attention, comfort, and love — just like they receive at home. Our
+            comprehensive pet care services are designed to ensure your furry
+            companions stay healthy, happy, and stress-free while you’re away.</span>
+            <br />
+            <span >From luxury boarding cabins with bedding to interactive play
+            sessions, we create a fun and safe environment that encourages
+            socialization and relaxation. Our dedicated team of animal lovers
+            monitors every guest closely, providing gentle care, nutritious
+            meals, and plenty of cuddles throughout their stay.</span>
+            <br />
+            <span>Whether your pet needs overnight care, daytime supervision, or
+            special medical attention, our trained staff follows your
+            instructions to maintain their usual routines. We also offer
+            grooming and wellness add-ons to keep your pet looking and feeling
+            their best.</span>
           </p>
         </div>
 
@@ -72,7 +81,7 @@ const HomePage = () => {
             modules={[Navigation, Pagination, Autoplay]}
             slidesPerView={1}
             spaceBetween={30}
-            navigationshow ={true}
+            navigationshow={true}
             pagination={{ clickable: true }}
             loop={true}
             autoplay={{ delay: 2700 }}
