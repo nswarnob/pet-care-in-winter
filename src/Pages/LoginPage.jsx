@@ -6,13 +6,14 @@ import { AuthContext } from "../Provider/AuthProvider";
 
 const LoginPage = () => {
   const [showpassword, setShowPassword] = useState(false);
-  const { signIn, setUser, resetPass, signInWithGoogle  } = useContext(AuthContext);
+  const { signIn, setUser, resetPass, signInWithGoogle } =
+    useContext(AuthContext);
   const [email, setEmail] = useState("");
-  
-   const navigate = useNavigate();
-   const location = useLocation();
 
-   console.log(location);
+  const navigate = useNavigate();
+  const location = useLocation();
+
+  console.log(location);
 
   const handleLogin = (e) => {
     e.preventDefault();
@@ -32,7 +33,7 @@ const LoginPage = () => {
       .then((result) => {
         setUser(result.user);
         toast.success("Logged In Success!");
-         navigate(`${location.state? location.state : "/"}`);
+        navigate(location.state?.from?.pathname || "/", { replace: true });
       })
       .catch((error) => {
         toast.error(error.message);
@@ -58,20 +59,16 @@ const LoginPage = () => {
     }
   };
 
-
- const handleGoogleLogin =()=>{
-  signInWithGoogle()
-    .then((result) => {
-      setUser(result.user);
-      toast.success(`Welcome, ${result.user.displayName}!`);
-    })
-    .catch((error) => {
-      toast.error(`Failed! ${error.message}`);
-    });
- }
-
-
-
+  const handleGoogleLogin = () => {
+    signInWithGoogle()
+      .then((result) => {
+        setUser(result.user);
+        toast.success(`Welcome, ${result.user.displayName}!`);
+      })
+      .catch((error) => {
+        toast.error(`Failed! ${error.message}`);
+      });
+  };
 
   return (
     <div className="w-full md:pt-35 pt-20 bg-base-200 min-h-screen">
@@ -115,9 +112,11 @@ const LoginPage = () => {
                 Login
               </button>
 
-
               {/* Google */}
-              <button onClick={handleGoogleLogin} className="btn bg-white text-black border-[#e5e5e5]">
+              <button
+                onClick={handleGoogleLogin}
+                className="btn bg-white text-black border-[#e5e5e5]"
+              >
                 <svg
                   aria-label="Google logo"
                   width="16"
