@@ -7,6 +7,7 @@ import SignUp from "../Pages/SignUp";
 import Loading from "../Components/Loading";
 import ServicePrivateRoute from "./ServicePrivateRoute";
 import MyProfile from "../Pages/MyProfile";
+import Book from "../Pages/Book";
 
 export const router = createBrowserRouter([
   {
@@ -14,32 +15,45 @@ export const router = createBrowserRouter([
     element: <MainLayout></MainLayout>,
     children: [
       {
-        index:true,
+        index: true,
         element: <HomePage></HomePage>,
-       loader: ()=>fetch("/Service.json"),
-       hydrateFallbackElement: <Loading></Loading>,
+        loader: () => fetch("/Service.json"),
+        hydrateFallbackElement: <Loading></Loading>,
       },
       {
         path: "/services",
-        element: <ServicePrivateRoute>
-          <ServicesPage></ServicesPage>
-        </ServicePrivateRoute>
+        element: (
+          <ServicePrivateRoute>
+            <ServicesPage></ServicesPage>
+          </ServicePrivateRoute>
+        ),
+        loader: () => fetch("/Service.json"),
+        hydrateFallbackElement: <Loading></Loading>,
       },
       {
-        path:"/login",
-        element:<LoginPage></LoginPage>,
+        path: "/login",
+        element: <LoginPage></LoginPage>,
       },
       {
-        path:"/signup",
-        element:<SignUp></SignUp>
+        path: "/signup",
+        element: <SignUp></SignUp>,
       },
       {
-        path:'/my-profile',
-        element:<ServicePrivateRoute>
-          <MyProfile></MyProfile>
-        </ServicePrivateRoute>
-      }
+        path: "/my-profile",
+        element: (
+          <ServicePrivateRoute>
+            <MyProfile></MyProfile>
+          </ServicePrivateRoute>
+        ),
+      },
+      {
+        path: "/book",
+        element: (
+          <ServicePrivateRoute>
+            <Book></Book>
+          </ServicePrivateRoute>
+        ),
+      },
     ],
   },
-
 ]);

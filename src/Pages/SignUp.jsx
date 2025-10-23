@@ -8,8 +8,7 @@ const SignUp = () => {
   const { createUser, setUser, updateUser } = useContext(AuthContext);
   const [showpassword, setShowPassword] = useState(false);
 
- const nevigate = useNavigate();
-
+  const nevigate = useNavigate();
 
   const handleSignup = (e) => {
     e.preventDefault();
@@ -17,7 +16,6 @@ const SignUp = () => {
     const email = e.target.email?.value;
     const name = e.target.name?.value;
     const photo = e.target.photoUrl?.value;
-    console.log(email, password, name, photo);
 
     const regEx = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{6,}$/;
     if (!regEx.test(password)) {
@@ -36,7 +34,7 @@ const SignUp = () => {
         updateUser({ displayName: name, photoURL: photo })
           .then(() => {
             setUser({ ...user, displayName: name, photoURL: photo });
-            nevigate('/');
+            nevigate("/");
           })
           .catch((error) => {
             toast.error(error.messasge);
@@ -52,7 +50,6 @@ const SignUp = () => {
       <div className="card mx-auto  bg-base-100 border border-primary w-full max-w-sm shrink-0 shadow-2xl">
         <div className="card-body relative">
           <form onSubmit={handleSignup}>
-            
             <fieldset className="fieldset">
               <label className="label">Name</label>
               <input
@@ -88,7 +85,7 @@ const SignUp = () => {
                 required
               />
               <span
-                className="absolute top-50 right-12 cursor-pointer"
+                className="absolute top-68 right-12 cursor-pointer"
                 onClick={() => setShowPassword(!showpassword)}
               >
                 {showpassword ? <FaEye size={21} /> : <FaEyeSlash size={21} />}

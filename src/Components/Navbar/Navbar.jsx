@@ -1,8 +1,10 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Link, NavLink } from "react-router";
 import { FaRegUserCircle } from "react-icons/fa";
+import { AuthContext } from "../../Provider/AuthProvider";
 
 const Navbar = () => {
+  const { user, logOut } = useContext(AuthContext);
   const Links = (
     <>
       <span className=" md:flex gap-5 items-center font-medium text-accent bg-base-100 md:text-[18px] lg:text-[19px] text-15px">
@@ -12,9 +14,11 @@ const Navbar = () => {
         <NavLink to={"/services"}>
           <li>Services</li>
         </NavLink>
-        <NavLink to={"/my-profile"}>
-          <li>My Profile</li>
-        </NavLink>
+        {user && (
+          <NavLink to={"/my-profile"}>
+            <li>My Profile</li>
+          </NavLink>
+        )}
       </span>
     </>
   );
@@ -23,7 +27,11 @@ const Navbar = () => {
     <div className="navbar max-w-[1240px] mx-auto">
       <div className="navbar-start">
         <div className="dropdown">
-          <div tabIndex={0} role="button" className="btn btn-ghost text-[#76a33e] lg:hidden">
+          <div
+            tabIndex={0}
+            role="button"
+            className="btn btn-ghost text-[#76a33e] lg:hidden"
+          >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               className="h-5 w-5"
@@ -47,15 +55,30 @@ const Navbar = () => {
             {Links}
           </ul>
         </div>
-        <Link to={'/'} className="text-[#76a33e] font-bold text-xl">WarmPaws</Link>
+        <Link to={"/"} className="text-[#76a33e] font-bold text-xl">
+          WarmPaws
+        </Link>
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1">{Links}</ul>
       </div>
-      <div className="navbar-end text-[#76a33e] gap-2">
-        <FaRegUserCircle  size={26} />
-       <Link to={'/login'} className=" rounded-3xl text-xl font-semibold" >  Login</Link>
-      </div>
+      { !user ? (
+        <div className="navbar-end text-[#76a33e] gap-2">
+          <FaRegUserCircle size={26} />
+          <Link to={"/login"} className=" rounded-3xl text-xl font-semibold">
+            {" "}
+            Login
+          </Link>
+        </div>
+      ) : (
+        <div className="navbar-end text-[#76a33e] gap-2">
+          <FaRegUserCircle size={26} />
+          <Link onClick={logOut} className=" rounded-3xl text-xl font-semibold">
+            {" "}
+            Logout
+          </Link>
+        </div>
+      )}
     </div>
   );
 };

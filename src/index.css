@@ -17,3 +17,8 @@ themes: light --default;
 *{
     font-family: "Poppins", sans-serif;
 }
+.active {
+    font-weight: bold;
+    color: #76a33e;
+    border-bottom: 2px solid #76a33e;
+}
