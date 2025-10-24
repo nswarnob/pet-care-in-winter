@@ -72,7 +72,7 @@ const Navbar = () => {
         </div>
       ) : (
         <div className="navbar-end text-[#76a33e] gap-2">
-          <FaRegUserCircle size={26} />
+          <img src={user.photoURL} className="w-8 h-8 rounded-full" alt="" />
           <Link onClick={logOut} className=" rounded-3xl text-xl font-semibold">
             {" "}
             Logout

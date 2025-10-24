@@ -19,7 +19,6 @@ const LoginPage = () => {
     e.preventDefault();
     const password = e.target.password.value;
     const email = e.target.email.value;
-    console.log(password, email);
 
     const regEx = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{6,}$/;
     if (!regEx.test(password)) {

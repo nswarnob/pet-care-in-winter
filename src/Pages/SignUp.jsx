@@ -30,7 +30,6 @@ const SignUp = () => {
         const user = result.user;
         toast.success("Logged In Success.");
 
-        //updated user data
         updateUser({ displayName: name, photoURL: photo })
           .then(() => {
             setUser({ ...user, displayName: name, photoURL: photo });

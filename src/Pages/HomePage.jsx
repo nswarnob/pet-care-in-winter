@@ -13,7 +13,7 @@ import PlayAllDay from "../Components/PlayAllDay";
 
 const HomePage = () => {
   const serviceData = useLoaderData();
-
+  console.log(serviceData);
   return (
     <div className="relative w-11/12 mx-auto">
       <div
